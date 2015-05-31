@@ -34,10 +34,8 @@ public class ConvexHull : MonoBehaviour
         {
             Vector3 pt = m_points[i];
 
-            Debug.DrawLine(pt, new Vector3(pt.x + 0.01f, pt.y, 0), Color.green, 0, false);
-            Debug.DrawLine(pt, new Vector3(pt.x, pt.y + 0.01f, 0), Color.green, 0, false);
-            Debug.DrawLine(pt, new Vector3(pt.x, pt.y - 0.01f, 0), Color.green, 0, false);
-            Debug.DrawLine(pt, new Vector3(pt.x - 0.01f, pt.y, 0), Color.green, 0, false);
+            Debug.DrawLine(new Vector3(pt.x - 0.01f, pt.y, 0), new Vector3(pt.x + 0.01f, pt.y, 0), Color.green, 0, false);
+            Debug.DrawLine(new Vector3(pt.x, pt.y - 0.01f, 0), new Vector3(pt.x, pt.y + 0.01f, 0), Color.green, 0, false);
         }
 
         // Render convex hull
